@@ -18,17 +18,12 @@ int main(){
     for(int i=1; i<n; i++){
         pre[i] = pre[i-1] + arr[i];
     }
-    cout << "Prefix Sum Array: ";
-    for(int i=0; i<n; i++){
-        cout << pre[i] << " ";
-    }
-    cout << endl;
     int q;
     cin >> q;
     while(q--){
         int l, r;
         cin >> l >> r;
-        if(r < l)
+        if(l < 0 || r < 0 || l >= n || r >= n || l > r)
             cout << "Invalid range" << endl;
         else
             cout << prefsum(pre, l, r) << endl;

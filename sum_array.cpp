@@ -19,7 +19,7 @@ int main(){
     while(q--){
         int l,r;
         cin>>l>>r;
-        if(r<l)
+        if(l < 0 || r < 0 || l >= n || r >= n || l > r)
             cout << "Invalid range" << endl;
         else 
             cout<<findsum(arr,l,r)<<endl;
